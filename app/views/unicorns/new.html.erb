@@ -3,10 +3,11 @@
     <div class="col-4 offset-4">
       <h1>Create a new Nextie 🦄</h1>
       <%= simple_form_for [@unicorn] do |f| %>
+        <%= f.input :name %>
         <%= f.input :sex, collection: ['male', 'female'] %>
-        <%= f.input :type, collection: ['friendly', 'agressive', 'shy'] %>
+        <%= f.input :behaviour, collection: ['friendly', 'agressive', 'shy'] %>
         <%= f.input :color, collection: ['white', 'purple', 'blue', 'yellow', 'silver', 'pink']  %>
-        <%= f.association :user, collection: User.all, label_method: :email %>
+        <%= f.input :user, collection: User.all, label_method: :email %>
         <%= f.submit class: "btn btn-primary" %>
       <% end %>
       <p><%= link_to "back to unicorns list", unicorns_path  %></p>

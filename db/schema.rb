@@ -16,8 +16,9 @@ ActiveRecord::Schema.define(version: 2020_05_25_093115) do
   enable_extension "plpgsql"
 
   create_table "unicorns", force: :cascade do |t|
+    t.text "name"
     t.text "sex"
-    t.text "type"
+    t.text "behaviour"
     t.text "color"
     t.bigint "user_id"
     t.datetime "created_at", null: false
