@@ -2,7 +2,10 @@
   <div class="unicorn">
     <h1><%= @unicorn.name %></h1>
     <% if current_user == @unicorn.user %>
-      <%= link_to "Change the name of your Nextie", edit_unicorn_path, class: "btn btn-primary" %>
+      <%= link_to "Change the name of my Nextie", edit_unicorn_path, class: "btn btn-primary" %>
+    <% end %>
+    <% if current_user.admin == true %>
+      <%= link_to "Send this Nextie to Heaven 🌈", unicorn_path, data: { confirm: "Are you sure you want to send this Nextie to Heaven ? 🌈" }, method: :delete, class: "btn btn-primary" %>
     <% end %>
   </div>
   <div class="unicorn-infos">

@@ -32,7 +32,7 @@ class UnicornsController < ApplicationController
     @unicorn = Unicorn.find(params[:id])
     @unicorn.update(unicorn_params)
     @unicorn.save
-    redirect_to unicorns_path
+    redirect_to unicorn_path(@unicorn)
   end
 
   def destroy

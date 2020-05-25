@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-4 offset-4">
+    <div class="col-6 offset-3 mt-4">
       <h1>Create a new Nextie 🦄</h1>
       <%= simple_form_for [@unicorn] do |f| %>
         <%= f.input :name %>
@@ -10,7 +10,7 @@
         <%= f.association :user, collection: User.all, label_method: :email %>
         <%= f.submit class: "btn btn-primary" %>
       <% end %>
-      <p><%= link_to "back to unicorns list", unicorns_path  %></p>
+      <p class="mt-4"><%= link_to "Back to Nexties list 🦄", unicorns_path  %></p>
     </div>
   </div>
 </div>
