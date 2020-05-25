@@ -1,5 +1,12 @@
 .index-title {
   text-align: left;
+  color: $pink;
+}
+
+.index-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card-unicorn {
@@ -10,6 +17,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  color: $pink;
 }
 
 .card-unicorn img {
@@ -23,4 +31,24 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
+}
+
+.unicorn {
+  color: $pink;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.unicorn-infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: $pink;
+}
+
+.unicorn-infos img {
+  height : 60vh;
 }

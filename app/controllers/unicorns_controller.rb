@@ -13,7 +13,11 @@ class UnicornsController < ApplicationController
   end
 
   def index
-    @unicorns = Unicorn.all
+    if current_user.admin == true
+      @unicorns = Unicorn.all
+    else
+      @unicorns = Unicorn.where(user: current_user)
+    end
   end
 
   def show

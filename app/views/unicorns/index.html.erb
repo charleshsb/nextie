@@ -1,5 +1,10 @@
 <div class="container">
-  <h1 class="index-title m-4">All Nesties 🦄</h1>
+  <div class="index-top">
+    <h1 class="index-title m-4">All Nesties 🦄</h1>
+    <% if current_user.admin == true  %>
+      <%= link_to "Create a new Nextie 🦄", new_unicorn_path, class: "btn btn-primary"  %>
+    <% end %>
+  </div>
   <% @unicorns.each do |unicorn| %>
     <%= link_to(unicorn_path(unicorn)) do  %>
       <div class="cards">

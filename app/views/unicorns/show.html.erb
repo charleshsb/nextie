@@ -1,1 +1,17 @@
-show.html.erb
+<div class="container">
+  <div class="unicorn">
+    <h1><%= @unicorn.name %></h1>
+    <% if current_user == @unicorn.user %>
+      <%= link_to "Change the name of your Nextie", edit_unicorn_path, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+  <div class="unicorn-infos">
+    <img src="https://images.unsplash.com/photo-1585544313985-f84aac5abf7b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80" />
+    <div>
+      <p>Sex : <%= @unicorn.sex %></p>
+      <p>Behaviour : <%= @unicorn.behaviour %></p>
+      <p>Owner : <%= @unicorn.user.email %></p>
+    </div>
+  </div>
+  <%= link_to "Back to all Nexties 🦄", unicorns_path, class: "btn btn-primary mt-4 mb-4" %>
+</div>
