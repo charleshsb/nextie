@@ -1,12 +1,16 @@
-.navbar-lewagon {
+.navbar-nextie {
+  height: 10vh;
+  background: $purple;
+}
+
+.navbar-nextie-flex {
+  display: flex;
   justify-content: space-between;
-  background: white;
+  align-items: center;
+  height: 100%;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-nextie a {
+  color: $white;
+  text-decoration: none;
 }
