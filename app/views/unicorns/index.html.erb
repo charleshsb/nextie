@@ -3,13 +3,11 @@
   <% @unicorns.each do |unicorn| %>
     <%= link_to(unicorn_path(unicorn)) do  %>
       <div class="cards">
-        <div class="card-product">
-          <img src="https://images.unsplash.com/photo-1513265472937-50d3e680377c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80" />
-          <div class="card-product-infos">
-            <p id="card-title"><%= unicorn.title %></p>
-            <p>Ticket master : <%= unicorn.user.first_name %></p>
-            <p>Ticket creation : <%= unicorn.created_at %></p>
-            <p>Number of comments : <%= unicorn.comments.count %></p>
+        <div class="card-unicorn">
+          <img src="https://images.unsplash.com/photo-1585544313985-f84aac5abf7b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80" />
+          <div class="card-unicorn-infos">
+            <p>Name : <%= unicorn.name %></p>
+            <p>Unicorn owner : <%= unicorn.user.email %></p>
           </div>
         </div>
       </div>

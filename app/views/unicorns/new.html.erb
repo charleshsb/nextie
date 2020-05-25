@@ -7,7 +7,7 @@
         <%= f.input :sex, collection: ['male', 'female'] %>
         <%= f.input :behaviour, collection: ['friendly', 'agressive', 'shy'] %>
         <%= f.input :color, collection: ['white', 'purple', 'blue', 'yellow', 'silver', 'pink']  %>
-        <%= f.input :user, collection: User.all, label_method: :email %>
+        <%= f.association :user, collection: User.all, label_method: :email %>
         <%= f.submit class: "btn btn-primary" %>
       <% end %>
       <p><%= link_to "back to unicorns list", unicorns_path  %></p>
